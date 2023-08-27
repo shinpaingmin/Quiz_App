@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* scrollbar-width: thin; */
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    background-color: gray;
+}
+
+.app {
+    background: url(./ques1.png);
+    min-height: 98.5vh;
+    border: 8px solid #39445a93;
+    margin: 5px;
+    padding: 5px;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 8vw;
+    font-family: "Montserrat",sans-serif;
+}
+
+.divider {
+    width: 100%;
+    margin: 10px;
+    background-color: gray;
+}
+
+/* Home */
+
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.settings {
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.banner {
+    width: 55%;
+    align-self: center;
+    padding: 8px;
+}
+
+.inputBoxes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-evenly;
+    flex: 0.8;      /* Equivalent to flex: 0 1 0.8; */
+}
+
+.error {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+
+/* quiz */
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.subtitle {
+    font-size: 25px;
+    border: 1px solid #000;
+    box-shadow: 4px 4px 2px #000;
+    padding: 5px 10px;
+}
+
+.quizInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+/* questions */
+
+.question {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.singleQuestion {
+    width: 95%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 5px solid gray;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.singleOption {
+    width: 46%;
+    height: 50px;
+    padding: 15px 20px;
+    margin: 10px;
+    box-sizing: 0 0 2px #000;
+}
+
+.select {
+    background-color: rgb(7, 207, 0);
+    color: #fff;
+    box-shadow: 0 0 1px #000;
+}
+
+.wrong {
+    background-color: rgb(233, 0, 0);
+    color: #fff;
+    box-shadow: 0 0 1px #000;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* result  */
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    text-align: center;
+}
+
+.resultTitleOne {
+    color: blue;
+    font-weight: bold;
+    font-size: 100px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.resultTitleTwo {
+    color: green;
+    font-weight: bold;
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.resultTitleThree {
+    color: blue;
+    font-weight: bold; 
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* media queries */
+
+@media(max-width: 1024px) {
+    .resultTitleOne {
+        font-size: 60px;
+    }
+
+    .resultTitleTwo {
+        font-size: 50px;
+    }
+
+    .resultTitleThree {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 800px) {
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .banner {
+        width: 85%;
+        padding: 20px 0 0;
+    }
+
+    .settings {
+        width: 100%;
+    }
+}
+
+@media(max-width: 614px) {
+    .singleOption {
+        width: 100%;
+    }
+    .resultTitleOne {
+        font-size: 40px;
+    }
+
+    .resultTitleTwo {
+        font-size: 30px;
+    }
+
+    .resultTitleThree {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
